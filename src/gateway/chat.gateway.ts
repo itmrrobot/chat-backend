@@ -19,7 +19,7 @@ import { MessageService } from 'src/services/message.service';
 import { Message } from 'src/@types/message';
 import { JoinedChannel } from 'src/@types/joined-channel';
 
-@WebSocketGateway({ cors: { origin: 'https://itmrrobot.github.io/chat/' } })
+@WebSocketGateway()
 export class ChatGateway
   implements OnGatewayConnection, OnGatewayDisconnect, OnModuleInit
 {
