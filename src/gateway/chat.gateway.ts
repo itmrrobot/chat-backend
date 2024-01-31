@@ -19,7 +19,7 @@ import { MessageService } from 'src/services/message.service';
 import { Message } from 'src/@types/message';
 import { JoinedChannel } from 'src/@types/joined-channel';
 
-@WebSocketGateway()
+@WebSocketGateway({ cors: { origin: 'https://chat-kydg.onrender.com' } })
 export class ChatGateway
   implements OnGatewayConnection, OnGatewayDisconnect, OnModuleInit
 {
